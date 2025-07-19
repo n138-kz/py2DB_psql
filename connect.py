@@ -36,6 +36,7 @@ if __name__ == '__main__':
     config = config_load()
     
     import psycopg2
+    from psycopg2.extras import DictCursor
     with psycopg2.connect('{}://{}:{}@{}:{}/{}'.format(
         config['internal']['databases'][0]['schema'],
         config['internal']['databases'][0]['user'],
@@ -44,6 +45,6 @@ if __name__ == '__main__':
         config['internal']['databases'][0]['port'],
         config['internal']['databases'][0]['database'],
     )) as conn:
-        with conn.cursor() as cur:
-            cur.execute('SELECT now(), EXTRACT(epoch FROM CURRENT_TIMESTAMP), trunc(EXTRACT(epoch FROM CURRENT_TIMESTAMP)), to_timestamp(trunc(EXTRACT(epoch FROM CURRENT_TIMESTAMP)));')
-            print(cur.fetchall())
+        with conn.cursor(cursor_factory=DictCursor) as cur:
+            cur.execute('SELECT count(uuid) as count from isjp where request like %s ', ('%.%',))
+            print(json.dumps(cur.fetchall()))

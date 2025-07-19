@@ -51,7 +51,7 @@ if __name__ == '__main__':
     cur = conn.cursor()
     
     try:
-        cur.execute('SELECT now();')
+        cur.execute('SELECT now(), EXTRACT(epoch FROM CURRENT_TIMESTAMP), trunc(EXTRACT(epoch FROM CURRENT_TIMESTAMP)), to_timestamp(trunc(EXTRACT(epoch FROM CURRENT_TIMESTAMP)));')
         print(cur.fetchall())
     except (psycopg2.errors.InsufficientPrivilege):
         print(traceback.format_exc())

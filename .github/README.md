@@ -42,6 +42,23 @@ pip install -r requirements.txt
 
 ```
 
+```python
+import psycopg2
+from psycopg2.extras import DictCursor
+
+with psycopg2.connect('postgresql://{}:{}@{}:{}/{}'.format(
+    'postgres',
+    'postgres',
+    'localhost',
+    '5432',
+    'postgres',
+)) as conn:
+    with conn.cursor(cursor_factory=DictCursor) as cur:
+    cur.execute('SELECT count(uuid) as count from isjp where request like %s ', ('%.%',))
+    print(json.dumps(cur.fetchall()))
+
+```
+
 ## License
 
 [Copyright (c) 2025 Yuu Komiya (n138), Under MIT License](LICENSE)  

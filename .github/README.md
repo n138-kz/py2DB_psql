@@ -4,6 +4,8 @@
 
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)py2DB_psql](https://github.com/n138-kz/py2DB_psql/)
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)Pythonから各種DBへ接続する方法](https://qiita.com/overflowfl/items/5abdf49322942276fb2c#2-3postgresql)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)psycopg2 でよくやる操作まとめ](https://qiita.com/hoto17296/items/0ca1569d6fa54c7c4732#%E5%AE%9F%E8%A1%8C%E7%B5%90%E6%9E%9C%E3%82%92%E8%BE%9E%E6%9B%B8%E5%BD%A2%E5%BC%8F%E3%81%A7%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)isjp](https://github.com/n138-kz/isjp/)
 
 ## Sample
 

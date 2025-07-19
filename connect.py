@@ -45,14 +45,13 @@ if __name__ == '__main__':
             config['internal']['databases'][0]['port'],
             config['internal']['databases'][0]['database'],
         ))
-    except (psycopg2.ProgrammingError):
-        print(traceback.format_exc())
 
-    cur = conn.cursor()
+        cur = conn.cursor()
     
-    try:
         cur.execute('SELECT now(), EXTRACT(epoch FROM CURRENT_TIMESTAMP), trunc(EXTRACT(epoch FROM CURRENT_TIMESTAMP)), to_timestamp(trunc(EXTRACT(epoch FROM CURRENT_TIMESTAMP)));')
         print(cur.fetchall())
+    except (psycopg2.ProgrammingError):
+        print(traceback.format_exc())
     except (psycopg2.errors.InsufficientPrivilege):
         print(traceback.format_exc())
     

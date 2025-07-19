@@ -3,7 +3,7 @@
 ## Refs
 
 - [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)py2DB_psql](https://github.com/n138-kz/py2DB_psql/)
-- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)py2DB_psql](https://qiita.com/overflowfl/items/5abdf49322942276fb2c#2-3postgresql)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://qiita.com)Pythonから各種DBへ接続する方法](https://qiita.com/overflowfl/items/5abdf49322942276fb2c#2-3postgresql)
 
 ## Sample
 
